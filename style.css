@@ -1,0 +1,281 @@
+/* ==========================================================================
+   1. CSS Variables (Theming & Color Palette)
+   ========================================================================== */
+:root {
+  --bg-color: #f8fafc;
+  --surface-color: #ffffff;
+  --text-main: #0f172a;
+  --text-muted: #64748b;   /*like date and venu in the card*/
+  --primary: #991b1b;
+  --primary-hover: #b91c1c;
+  --border-color: #e2e8f0;
+  --accent-badge: #fee2e2;   /* like the badge(main event) in the card*/
+  --accent-badge-text: #7f1d1d;
+}
+
+/* 3l4an man5le4 el margin kbeer awii */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui;
+  line-height: 1.6;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+}
+
+/* ==========================================================================
+   2. Pure CSS Dark Mode Implementation
+   Uses a hidden checkbox and sibling combinator (~) to reassign variables
+   ========================================================================== */
+.theme-toggle-checkbox {      /*without it the checkbox will be visible on the page mn foo2*/
+  position: absolute;
+  opacity: 0;
+}
+
+/* Complex selector: checkbox checked switches CSS variables for the wrapper */
+.theme-toggle-checkbox:checked ~ .site-wrapper {
+  --bg-color: #1c1111;
+  --surface-color: #2a1515;
+  --text-main: #f8fafc;
+  --text-muted: #c9b8b8;
+  --primary: #ef4444;
+  --primary-hover: #f87171;
+  --border-color: #4a2a2a;
+  --accent-badge: #683030;   /* like the badge(main event) in the card*/
+  --accent-badge-text: #fecaca;
+}
+
+.site-wrapper {    /* wrapper for the entire site content to apply dark mode styles */
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ==========================================================================
+   3. Header & Navigation (Flexbox Layout)
+   ========================================================================== */
+.site-header {
+  background-color: var(--surface-color);
+  border-bottom: 1px solid var(--border-color);
+  padding: 1rem 1.5rem;  /* padding top and bottom 1rem, left and right 1.5rem to create a nice margin around header */
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+/*3l4n butthon el dark mode*/
+.theme-toggle-btn {            
+  cursor: pointer;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+}
+
+.theme-toggle-btn:hover {
+  background-color: var(--border-color);
+}
+
+.main-nav ul {
+  display: flex; /*to be in one line*/
+  gap: 1rem;
+  list-style: none;  /*tp remove the defult bullet points =*/
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: var(--text-main);
+  font-weight: 500;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+}
+
+.main-nav a:hover {
+  color: var(--primary);
+  background-color: var(--accent-badge);
+}
+
+/* ==========================================================================
+   4. Main Content & Grid Layout
+   ========================================================================== */
+main {
+  flex: 1;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.hero-section {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.hero-section h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-section p {
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.featured-events h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Event Grid Layout */
+.event-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.event-card {
+  background-color: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.badge {
+  display: inline-block;
+  align-self: flex-start;
+  background-color: var(--accent-badge);
+  color: var(--accent-badge-text);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  margin-bottom: 0.75rem;
+}
+
+.event-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+/* catalogue posters */
+.event-poster {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 0.75rem;
+  background-color: var(--border-color);
+}
+
+.past-events {
+  margin-top: 2.5rem;
+}
+
+.event-card.past {
+  opacity: 0.9;
+}
+
+.event-meta {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 0.25rem;
+}
+
+.event-desc {
+  margin: 0.75rem 0 1.25rem;
+  font-size: 0.95rem;
+  flex: 1;
+}
+
+.btn {
+  display: inline-block;
+  align-self: flex-start;
+  text-decoration: none;
+  background-color: var(--primary);
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease;
+}
+
+.btn:hover {
+  background-color: var(--primary-hover);
+}
+
+/* ==========================================================================
+   5. Footer Layout (Flexbox)
+   ========================================================================== */
+.site-footer {
+  background-color: var(--surface-color);
+  border-top: 1px solid var(--border-color);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+.social-links {
+  display: flex;
+  list-style: none;
+  gap: 1.25rem;
+}
+
+.social-links a {
+  color: var(--primary);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: opacity 0.2s ease;
+}
+
+.social-links a:hover {
+  text-decoration: underline;
+  opacity: 0.8;
+}
+
+/* ==========================================================================
+   6. Responsive Breakpoints
+   ========================================================================== */
+/* Tablet (around 768px) */
+@media (min-width: 768px) {
+  .event-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .site-footer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+/* Desktop (around 1024px to 1280px) */
+@media (min-width: 1024px) {
+  .event-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

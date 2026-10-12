@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events - Campus Events Guide</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <input type="checkbox" id="theme-toggle" class="theme-toggle-checkbox">
+
+  <div class="site-wrapper">
+    <header class="site-header">
+      <div class="header-top">
+        <h1 class="logo">Campus Events Guide</h1>
+        <label for="theme-toggle" class="theme-toggle-btn" title="Toggle Dark/Light Mode">
+          🌓 Mode
+        </label>
+      </div>
+
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="events.html" class="active">Events</a></li>
+          <li><a href="event-details.html">Event Details</a></li>
+          <li><a href="schedule.html">Schedule</a></li>
+          <li><a href="registration.html">Registration</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero-section">
+        <h2>Event Catalogue</h2>
+        <p>Browse all upcoming and past campus events. Find your next thing to join.</p>
+      </section>
+
+      <!-- Upcoming events -->
+      <section class="featured-events">
+        <h2>Upcoming Events</h2>
+
+        <div class="event-grid">
+          <!-- same featured event from home page -->
+          <article class="event-card featured">
+            <img class="event-poster" src="Annual Tech Symposium 2026.jpeg" alt="Annual Tech Symposium poster">
+            <span class="badge">Main Event - Tech</span>
+            <h3>Annual Tech Symposium 2026</h3>
+            <p class="event-meta"><strong>Date:</strong> November 15, 2026</p>
+            <p class="event-meta"><strong>Venue:</strong> Main Auditorium Hall A</p>
+            <p class="event-desc">Keynotes, project showcases and student innovators from all departments.</p>
+            <a href="event-details.html" class="btn">View Details</a>
+          </article>
+
+          <article class="event-card">
+            <img class="event-poster" src="Campus Art & Culture Fest.avif" alt="Art and Culture Fest poster">
+            <span class="badge">Culture</span>
+            <h3>Campus Art & Culture Fest</h3>
+            <p class="event-meta"><strong>Date:</strong> November 20, 2026</p>
+            <p class="event-meta"><strong>Venue:</strong> Student Union Plaza</p>
+            <p class="event-desc">Live performances, gallery exhibits and student artisan stalls.</p>
+            <a href="event-details.html" class="btn">View Details</a>
+          </article>
+
+          <article class="event-card">
+            <img class="event-poster" src="Fall Career & Internship Fairjpg.jpg" alt="Career fair poster">
+            <span class="badge">Career</span>
+            <h3>Fall Career & Internship Fair</h3>
+            <p class="event-meta"><strong>Date:</strong> December 02, 2026</p>
+            <p class="event-meta"><strong>Venue:</strong> Engineering Building Atrium</p>
+            <p class="event-desc">Meet recruiters hiring for summer internships and entry roles.</p>
+            <a href="event-details.html" class="btn">View Details</a>
+          </article>
+        </div>
+      </section>
+
+      <!-- Past events -->
+      <section class="featured-events past-events">
+        <h2>Past Events</h2>
+
+        <div class="event-grid">
+          <article class="event-card past">
+            <img class="event-poster" src="Spring Hackathon 2026.jpg" alt="Spring hackathon poster">
+            <span class="badge">Tech</span>
+            <h3>Spring Hackathon 2026</h3>
+            <p class="event-meta"><strong>Date:</strong> March 12, 2026</p>
+            <p class="event-meta"><strong>Venue:</strong> Innovation Lab</p>
+            <p class="event-desc">24-hour coding competition. 20 teams built campus apps.</p>
+            <a href="event-details.html" class="btn">View Recap</a>
+          </article>
+
+          <article class="event-card past">
+            <img class="event-poster" src="Book Fair & Poetry Nightjpg.jpg" alt="Book fair poster">
+            <span class="badge">Culture</span>
+            <h3>Book Fair & Poetry Night</h3>
+            <p class="event-meta"><strong>Date:</strong> September 05, 2026</p>
+            <p class="event-meta"><strong>Venue:</strong> Central Library</p>
+            <p class="event-desc">Book stalls during the day and open mic poetry at night.</p>
+            <a href="event-details.html" class="btn">View Recap</a>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 Campus Events Guide. All rights reserved.</p>
+      <ul class="social-links">
+        <li><a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a></li>
+        <li><a href="https://x.com" target="_blank" rel="noopener">Twitter / X</a></li>
+        <li><a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a></li>
+      </ul>
+    </footer>
+  </div>
+</body>
+</html>
