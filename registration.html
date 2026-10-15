@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration - Campus Events Guide</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <input type="checkbox" id="theme-toggle" class="theme-toggle-checkbox">
+
+  <div class="site-wrapper">
+    <header class="site-header">
+      <div class="header-top">
+        <h1 class="logo">Campus Events Guide</h1>
+        <label for="theme-toggle" class="theme-toggle-btn" title="Toggle Dark/Light Mode">
+          🌓 Mode
+        </label>
+      </div>
+
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="event-details.html">Event Details</a></li>
+          <li><a href="schedule.html">Schedule</a></li>
+          <li><a href="registration.html" class="active">Registration</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero-section">
+        <h2>Annual Tech Symposium 2026</h2>
+        <p><strong>Date:</strong> November 15, 2026 &nbsp;|&nbsp; <strong>Time:</strong> 9:00 AM - 5:00 PM &nbsp;|&nbsp; <strong>Venue:</strong> Main Auditorium Hall A</p>
+        <p><a href="event-details.html" class="btn btn-secondary">View Event Details</a></p>
+      </section>
+
+      <section class="featured-events">
+        <h2>Register for the Event</h2>
+        <div class="details-grid">
+          <article class="event-card form-card">
+            <h3>Registration Form</h3>
+            <p class="event-desc">Complete all required * fields. Your spot is confirmed by email.</p>
+            <form action="#" method="post" enctype="multipart/form-data">
+              <!-- text -->
+              <div class="form-group">
+                <label for="attendee-name">Attendee Name *</label>
+                <input type="text" id="attendee-name" name="attendee-name" required maxlength="50" pattern="[A-Za-z ]{3,50}" title="3-50 letters and spaces only" placeholder="e.g. Ali Ahmed">
+              </div>
+
+              <!-- email -->
+              <div class="form-group">
+                <label for="attendee-email">Email *</label>
+                <input type="email" id="attendee-email" name="attendee-email" required maxlength="80" placeholder="you@university.edu">
+              </div>
+
+              <!-- url -->
+              <div class="form-group">
+                <label for="portfolio-url">Portfolio / LinkedIn URL</label>
+                <input type="url" id="portfolio-url" name="portfolio-url" placeholder="https://linkedin.com/in/yourname">
+              </div>
+
+              <div class="form-row">
+                <!-- number -->
+                <div class="form-group">
+                  <label for="tickets">Number of Seats *</label>
+                  <input type="number" id="tickets" name="tickets" required min="1" max="5" value="1">
+                </div>
+                <!-- date -->
+                <div class="form-group">
+                  <label for="attendance-date">Attendance Date *</label>
+                  <input type="date" id="attendance-date" name="attendance-date" required value="2026-11-15" min="2026-11-15" max="2026-11-15">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <!-- time -->
+                <div class="form-group">
+                  <label for="arrival-time">Arrival Time *</label>
+                  <input type="time" id="arrival-time" name="arrival-time" required value="09:00" min="08:30" max="16:00">
+                </div>
+                <!-- color -->
+                <div class="form-group">
+                  <label for="badge-color">Badge Color</label>
+                  <input type="color" id="badge-color" name="badge-color" value="#991b1b">
+                </div>
+              </div>
+
+              <!-- range -->
+              <div class="form-group">
+                <label for="interest">Interest in Workshops (1-10): <output id="interest-val">7</output></label>
+                <input type="range" id="interest" name="interest" min="1" max="10" value="7">
+              </div>
+
+              <!-- select -->
+              <div class="form-group">
+                <label for="event-choice">Event Choice *</label>
+                <select id="event-choice" name="event-choice" required>
+                  <option value="">Select an event</option>
+                  <option value="symposium" selected>Annual Tech Symposium 2026 - Nov 15</option>
+                  <option value="art-fest">Campus Art &amp; Culture Fest - Nov 20</option>
+                  <option value="career-fair">Fall Career &amp; Internship Fair - Dec 02</option>
+                </select>
+              </div>
+
+              <!-- radio -->
+              <fieldset class="form-group">
+                <legend>Attendance Mode *</legend>
+                <div class="form-check">
+                  <input type="radio" id="mode-inperson" name="mode" value="in-person" required checked>
+                  <label for="mode-inperson">In-person</label>
+                </div>
+                <div class="form-check">
+                  <input type="radio" id="mode-virtual" name="mode" value="virtual">
+                  <label for="mode-virtual">Virtual (livestream)</label>
+                </div>
+              </fieldset>
+
+              <!-- file -->
+              <div class="form-group">
+                <label for="student-id">Upload Student ID *</label>
+                <input type="file" id="student-id" name="student-id" required accept=".pdf,.jpg,.jpeg,.png">
+              </div>
+
+              <!-- textarea -->
+              <div class="form-group">
+                <label for="access-needs">Access Needs / Expectations</label>
+                <textarea id="access-needs" name="access-needs" rows="4" maxlength="300" placeholder="Dietary, accessibility, questions... (max 300 characters)"></textarea>
+              </div>
+
+              <!-- checkbox -->
+              <div class="form-group form-check">
+                <input type="checkbox" id="newsletter" name="newsletter" checked>
+                <label for="newsletter">Send me updates about future campus events</label>
+              </div>
+              <div class="form-group form-check">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">I accept the event terms and confirm my details *</label>
+              </div>
+
+              <button type="submit" class="btn">Submit Registration</button>
+              <button type="reset" class="btn btn-secondary">Clear</button>
+            </form>
+          </article>
+
+          <aside class="detail-side">
+            <article class="event-card">
+              <h3>Event Contact Details</h3>
+              <p class="event-meta"><strong>Event:</strong> Annual Tech Symposium 2026</p>
+              <p class="event-meta"><strong>Date:</strong> November 15, 2026</p>
+              <p class="event-meta"><strong>Venue:</strong> Main Auditorium Hall A</p>
+              <ul class="ticket-list">
+                <li><strong>Email:</strong> <a href="mailto:tech.symposium@campus.edu">tech.symposium@campus.edu</a></li>
+                <li><strong>Phone:</strong> <a href="tel:+15551234567">+1 (555) 123-4567</a></li>
+                <li><strong>Office:</strong> Student Activities Office, Building C Room 204</li>
+                <li><strong>Hours:</strong> Sun-Thu, 9:00 AM - 4:00 PM</li>
+              </ul>
+            </article>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 Campus Events Guide. All rights reserved.</p>
+      <ul class="social-links">
+        <li><a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a></li>
+        <li><a href="https://x.com" target="_blank" rel="noopener">Twitter / X</a></li>
+        <li><a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a></li>
+      </ul>
+    </footer>
+  </div>
+</body>
+</html>

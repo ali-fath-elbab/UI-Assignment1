@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Schedule - Campus Events Guide</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <input type="checkbox" id="theme-toggle" class="theme-toggle-checkbox">
+
+  <div class="site-wrapper">
+    <header class="site-header">
+      <div class="header-top">
+        <h1 class="logo">Campus Events Guide</h1>
+        <label for="theme-toggle" class="theme-toggle-btn" title="Toggle Dark/Light Mode">
+          🌓 Mode
+        </label>
+      </div>
+
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="event-details.html">Event Details</a></li>
+          <li><a href="schedule.html" class="active">Schedule</a></li>
+          <li><a href="registration.html">Registration</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero-section schedule-hero">
+        <h2>Campus Event Timetable</h2>
+        <p>All upcoming campus events in one place. Times and venues match the event catalogue and detail pages.</p>
+        <ul class="schedule-legend">
+          <li><span class="dot dot-main"></span> Main Event</li>
+          <li><span class="dot dot-tech"></span> Tech</li>
+          <li><span class="dot dot-culture"></span> Culture</li>
+          <li><span class="dot dot-career"></span> Career</li>
+        </ul>
+      </section>
+
+      <section class="featured-events schedule-section">
+        <h2>Upcoming Schedule</h2>
+        <div class="table-wrapper">
+          <table class="schedule-table">
+            <caption>Fall 2026 campus timetable — 5 events</caption>
+            <thead>
+              <tr>
+                <th scope="col">Event</th>
+                <th scope="col">Date</th>
+                <th scope="col">Time</th>
+                <th scope="col">Venue</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="highlight-row">
+                <td data-label="Event">
+                  <a href="event-details.html">Annual Tech Symposium 2026</a>
+                  <span class="badge">Main Event</span>
+                  <span class="cat-badge cat-tech">Tech</span>
+                </td>
+                <td data-label="Date"><span class="date-text">November 15, 2026</span></td>
+                <td data-label="Time"><span class="time-pill">9:00 AM - 5:00 PM</span></td>
+                <td data-label="Venue"><span class="venue-pill">Main Auditorium Hall A</span></td>
+              </tr>
+              <tr>
+                <td data-label="Event">
+                  Campus Art &amp; Culture Fest
+                  <span class="cat-badge cat-culture">Culture</span>
+                </td>
+                <td data-label="Date"><span class="date-text">November 20, 2026</span></td>
+                <td data-label="Time"><span class="time-pill">4:00 PM - 9:00 PM</span></td>
+                <td data-label="Venue"><span class="venue-pill">Student Union Plaza</span></td>
+              </tr>
+              <tr>
+                <td data-label="Event">
+                  Fall Career &amp; Internship Fair
+                  <span class="cat-badge cat-career">Career</span>
+                </td>
+                <td data-label="Date"><span class="date-text">December 02, 2026</span></td>
+                <td data-label="Time"><span class="time-pill">10:00 AM - 3:00 PM</span></td>
+                <td data-label="Venue"><span class="venue-pill">Engineering Building Atrium</span></td>
+              </tr>
+              <tr>
+                <td data-label="Event">
+                  Spring Hackathon 2026
+                  <span class="cat-badge cat-tech">Tech</span>
+                </td>
+                <td data-label="Date"><span class="date-text">March 12, 2026</span></td>
+                <td data-label="Time"><span class="time-pill">9:00 AM - 9:00 AM (24h)</span></td>
+                <td data-label="Venue"><span class="venue-pill">Innovation Lab</span></td>
+              </tr>
+              <tr>
+                <td data-label="Event">
+                  Book Fair &amp; Poetry Night
+                  <span class="cat-badge cat-culture">Culture</span>
+                </td>
+                <td data-label="Date"><span class="date-text">September 05, 2026</span></td>
+                <td data-label="Time"><span class="time-pill">11:00 AM - 10:00 PM</span></td>
+                <td data-label="Venue"><span class="venue-pill">Central Library</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <article class="event-card schedule-note-card">
+          <div>
+            <h3>Featured: Annual Tech Symposium 2026</h3>
+            <p class="event-meta"><strong>November 15, 2026</strong> · 9:00 AM - 5:00 PM · <strong>Main Auditorium Hall A</strong></p>
+          </div>
+          <div class="schedule-note-actions">
+            <a href="registration.html" class="btn">Register here</a>
+            <a href="event-details.html" class="btn btn-secondary">View Details</a>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 Campus Events Guide. All rights reserved.</p>
+      <ul class="social-links">
+        <li><a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a></li>
+        <li><a href="https://x.com" target="_blank" rel="noopener">Twitter / X</a></li>
+        <li><a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a></li>
+      </ul>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Details - Campus Events Guide</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <input type="checkbox" id="theme-toggle" class="theme-toggle-checkbox">
+
+  <div class="site-wrapper">
+    <header class="site-header">
+      <div class="header-top">
+        <h1 class="logo">Campus Events Guide</h1>
+        <label for="theme-toggle" class="theme-toggle-btn" title="Toggle Dark/Light Mode">
+          🌓 Mode
+        </label>
+      </div>
+
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="event-details.html" class="active">Event Details</a></li>
+          <li><a href="schedule.html">Schedule</a></li>
+          <li><a href="registration.html">Registration</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero-section">
+        <h2>Annual Tech Symposium 2026</h2>
+        <p>Our featured main event — keynotes, showcases, and networking for students, faculty, and industry guests.</p>
+      </section>
+
+      <section class="featured-events">
+        <h2>Event Overview</h2>
+        <div class="details-grid">
+          <article class="event-card detail-main">
+            <img class="detail-poster" src="Annual Tech Symposium 2026.jpeg" alt="Annual Tech Symposium 2026 poster showing main auditorium stage">
+            <span class="badge">Main Event - Tech</span>
+            <h3>Annual Tech Symposium 2026</h3>
+            <p class="event-meta"><strong>Date:</strong> November 15, 2026</p>
+            <p class="event-meta"><strong>Time:</strong> 9:00 AM - 5:00 PM</p>
+            <p class="event-meta"><strong>Venue:</strong> Main Auditorium Hall A</p>
+            <p class="event-desc">
+              Join industry leaders, student innovators, and faculty for a full day of keynote sessions,
+              live project showcases, panel discussions, and hands-on demo zones. The Annual Tech Symposium
+              brings together all departments to present research, startups, and final-year projects,
+              plus career networking with tech partners hiring for 2027 internships.
+            </p>
+            <a href="registration.html" class="btn">Register Now</a>
+          </article>
+
+          <div class="detail-side">
+            <article class="event-card">
+              <h3>Agenda</h3>
+              <ol class="agenda-list">
+                <li><strong>09:00 AM:</strong> Registration &amp; Welcome Coffee</li>
+                <li><strong>10:00 AM:</strong> Opening Keynote - Future of AI on Campus</li>
+                <li><strong>11:30 AM:</strong> Student Project Showcase Part 1</li>
+                <li><strong>01:00 PM:</strong> Lunch Break &amp; Networking</li>
+                <li><strong>02:00 PM:</strong> Panel: Careers in Tech &amp; Engineering</li>
+                <li><strong>03:30 PM:</strong> Live Demos &amp; Innovation Lab Tour</li>
+                <li><strong>04:30 PM:</strong> Awards &amp; Closing Remarks</li>
+              </ol>
+            </article>
+
+            <article class="event-card ticket-box">
+              <h3>Tickets &amp; Entry</h3>
+              <ul class="ticket-list">
+                <li><strong>Students:</strong> Free entry with valid student ID</li>
+                <li><strong>Faculty &amp; Staff:</strong> Free entry, registration required</li>
+                <li><strong>External Guests:</strong> $10 at the door</li>
+              </ul>
+              <p class="event-desc">Seats are limited to 500. Doors open at 8:30 AM. Please bring your confirmation email and student ID.</p>
+              <a href="registration.html" class="btn">Get Your Seat</a>
+              <a href="schedule.html" class="btn btn-secondary">View Timetable</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="featured-events">
+        <h2>Event Media</h2>
+        <div class="event-grid">
+          <article class="event-card">
+            <h3>Promo Video</h3>
+            <p class="event-desc">Highlights from last year's symposium.</p>
+            <video class="media-player" controls poster="Annual Tech Symposium 2026.jpeg">
+              <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </article>
+          <article class="event-card">
+            <h3>Audio Teaser</h3>
+            <p class="event-desc">Listen to a welcome message from the organizers.</p>
+            <audio class="media-player" controls>
+              <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+              Your browser does not support the audio element.
+            </audio>
+            <p class="event-meta">Photo gallery: posters from <a href="events.html">Event Catalogue</a></p>
+          </article>
+        </div>
+      </section>
+
+      <section class="featured-events">
+        <h2>Leave a Review</h2>
+        <article class="event-card form-card">
+          <h3>Event Review Form</h3>
+          <p class="event-desc">Attended before? Tell us what you think. All fields marked * are required.</p>
+          <form action="#" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+              <label for="review-name">Full Name *</label>
+              <input type="text" id="review-name" name="review-name" required maxlength="50" placeholder="e.g. Ali Ahmed">
+            </div>
+            <div class="form-group">
+              <label for="review-email">Email *</label>
+              <input type="email" id="review-email" name="review-email" required placeholder="you@university.edu">
+            </div>
+            <div class="form-group">
+              <label for="review-rating">Rating *</label>
+              <select id="review-rating" name="review-rating" required>
+                <option value="">Choose a rating</option>
+                <option value="5">5 - Excellent</option>
+                <option value="4">4 - Very Good</option>
+                <option value="3">3 - Good</option>
+                <option value="2">2 - Fair</option>
+                <option value="1">1 - Poor</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="review-message">Your Review *</label>
+              <textarea id="review-message" name="review-message" rows="4" required maxlength="500" placeholder="Share highlights, suggestions... (max 500 characters)"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="review-photo">Upload Photo (optional)</label>
+              <input type="file" id="review-photo" name="review-photo" accept="image/*">
+            </div>
+            <div class="form-group form-check">
+              <input type="checkbox" id="review-consent" name="review-consent" required>
+              <label for="review-consent">I agree to publish my review *</label>
+            </div>
+            <button type="submit" class="btn">Submit Review</button>
+          </form>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 Campus Events Guide. All rights reserved.</p>
+      <ul class="social-links">
+        <li><a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a></li>
+        <li><a href="https://x.com" target="_blank" rel="noopener">Twitter / X</a></li>
+        <li><a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a></li>
+      </ul>
+    </footer>
+  </div>
+</body>
+</html>
